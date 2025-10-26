@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="icon" href="transparent.ico">
+    <style>
+        body {
+            background: #c0c0c0;
+            font-family: "Comic Sans MS", "Times New Roman", serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQYV2N89+7dfwYgYGRkZAAAPGQD/hRqVTQAAAAASUVORK5CYII=');
+        }
+        
+        header {
+            background: linear-gradient(to bottom, #000080, #0000CD);
+            color: white;
+            padding: 20px;
+            border: 3px outset #fff;
+            text-align: center;
+            box-shadow: 5px 5px 0px #000;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            text-shadow: 2px 2px #000;
+            margin: 10px 0;
+            animation: blink 2s infinite;
+        }
+        
+        h2 {
+            font-size: 20px;
+            color: #ffff00;
+            text-shadow: 1px 1px #000;
+            margin: 5px 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            background: #c0c0c0;
+            border: 3px inset #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 5px 5px 0px #000;
+        }
+        
+        .search-box h3 {
+            color: #000080;
+            font-size: 24px;
+            margin-top: 0;
+        }
+        
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px inset #fff;
+            background: white;
+            font-family: "Courier New", monospace;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #c0c0c0;
+            border: 3px outset #fff;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        button:active {
+            border-style: inset;
+        }
+        
+        .links-section {
+            background: #ffffff;
+            border: 3px ridge #808080;
+            padding: 15px;
+            margin: 20px 0;
+            box-shadow: 5px 5px 0px #000;
+        }
+        
+        .links-section h3 {
+            background: #000080;
+            color: white;
+            padding: 5px;
+            margin: -15px -15px 15px -15px;
+            font-size: 18px;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .link-item {
+            background: #c0c0c0;
+            border: 2px outset #fff;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .link-item:hover {
+            background: #a0a0a0;
+        }
+        
+        .link-item a {
+            color: #0000ff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .link-item a:visited {
+            color: #800080;
+        }
+        
+        marquee {
+            background: #ffff00;
+            border: 2px solid #000;
+            padding: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        
+        .counter {
+            text-align: center;
+            margin: 20px 0;
+            font-family: "Courier New", monospace;
+            font-size: 14px;
+        }
+        
+        .webring {
+            background: #c0c0c0;
+            border: 3px ridge #fff;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 5px 5px 0px #000;
+        }
+        
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+        
+        .under-construction {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .under-construction img {
+            animation: rotate 2s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .gif-divider {
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Wide World of the Web</h1>
+            <h2>Where do you want to go today?</h2>
+            <p style="font-size: 12px; margin: 5px 0;">Best viewed in Netscape Navigator 4.0 or Internet Explorer 3.0</p>
+        </header>
+        
+        <marquee behavior="scroll" direction="left">
+            Do not forget to smile! - Do not searh bad things!
+        </marquee>
+        
+        <div class="search-box">
+            <h3>🔍 Search the Web:</h3>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Enter your search query...">
+                <button type="submit">GO!</button>
+                <button type="button" onclick="document.getElementById('searchInput').value=''">Clear</button>
+            </form>
+        </div>
+        
+        <div class="links-section">
+            <h3>⭐ Cool Links ⭐</h3>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="https://www.google.com">Google</a><br>
+                    <small>Search Engine</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.youtube.com">YouTube</a><br>
+                    <small>Videos</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.reddit.com">Reddit</a><br>
+                    <small>Forums</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.wikipedia.org">Wikipedia</a><br>
+                    <small>Encyclopedia</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.github.com">GitHub</a><br>
+                    <small>Code Repository</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://errorsyntax.neocities.org">The SyntaxError! website</a><br>
+                    <small>Your Website :D</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gif-divider">
+            <span style="font-size: 30px;">🔥🔥🔥🔥🔥</span>
+        </div>
+        
+        <div class="links-section">
+            <h3>📧 Useful Tools</h3>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="https://mail.google.com">Gmail</a><br>
+                    <small>Email</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://mail.google.com">Proton Mail</a><br>
+                    <small>Email</small>
+                </div>
+                <div class="link-item">
+                    <a href="http://localhost:8384/">Syncthing</a><br>
+                    <small>Social Media</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.twitter.com">Twitter/X</a><br>
+                    <small>Social Media</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="under-construction">
+            <p style="font-size: 20px; font-weight: bold;">🚧 UNDER CONSTRUCTION 🚧</p>
+            <p>This page is always being updated with new cool stuff!</p>
+        </div>
+        
+        <div class="counter">
+            <p>👁️ You are visitor number: <strong><span id="visitor">000042</span></strong></p>
+            <p style="font-size: 11px;">Page last updated: October 26, 2025</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px; font-size: 12px;">
+            <p>Best viewed at 800x600 resolution</p>
+            <p>Made with ❤️ and Notepad</p>
+            <p style="color: #808080;">© 2025 - All rights reserved (or something)</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = document.getElementById('searchInput').value;
+            if (query.trim()) {
+                window.open('https://duckduckgo.com/?q=' + encodeURIComponent(query), '_blank');
+            }
+        });
+        
+        // Contador de visitantes animado
+        let count = 42;
+        setInterval(() => {
+            count++;
+            document.getElementById('visitor').textContent = count.toString().padStart(6, '0');
+        }, 30000);
+    </script>
+</body>
+</html>
