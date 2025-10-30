@@ -124,15 +124,14 @@
             color: #800080;
         }
         
-        marquee {
+        .marquee {
             background: #ffff00;
             border: 2px solid #000;
             padding: 5px;
-            margin: 20px 0;
             font-weight: bold;
             color: #ff0000;
         }
-        
+
         .counter {
             text-align: center;
             margin: 20px 0;
@@ -182,9 +181,9 @@
             <p style="font-size: 12px; margin: 5px 0;">Best viewed in Netscape Navigator 4.0 or Internet Explorer 3.0</p>
         </header>
         
-        <marquee id="phrases" behavior="scroll" direction="left">
-            
-        </marquee>
+        <div id="phrases" class="marquee">
+
+        </div>
         
         <div class="search-box">
             <h3>Search the Web:</h3>
@@ -213,6 +212,10 @@
                 <div class="link-item">
                     <a href="https://www.github.com">GitHub</a><br>
                     <small>Code Repository</small>
+                </div>
+                <div class="link-item">
+                    <a href="https://neocities.org">Neocities</a><br>
+                    <small>Website hosting</small>
                 </div>
                 <div class="link-item">
                     <a href="https://errorsyntax.neocities.org">The SyntaxError! website</a><br>
@@ -252,7 +255,7 @@
                 </div>
                 <div class="link-item">
                     <a href="https://novoportal.cruzeirodosul.edu.br/home/6">Cruzeiro do Sul</a><br>
-                    <small>School platform</small>
+                    <small>Another school platform</small>
                 </div>
                 <div class="link-item">
                     <a href="https://hpanel.hostinger.com/">Hostinger</a><br>
