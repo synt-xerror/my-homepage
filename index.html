@@ -182,27 +182,22 @@
             <p style="font-size: 12px; margin: 5px 0;">Best viewed in Netscape Navigator 4.0 or Internet Explorer 3.0</p>
         </header>
         
-        <marquee behavior="scroll" direction="left">
-            Do not forget to smile! - Do not searh bad things!
+        <marquee id="phrases" behavior="scroll" direction="left">
+            
         </marquee>
         
         <div class="search-box">
             <h3>Search the Web:</h3>
             <form id="searchForm">
-                <input type="text" id="searchInput" placeholder="Enter your search query...">
+                <input type="text" id="searchInput" placeholder="Enter the words...">
                 <button type="submit">GO!</button>
-                <button type="button" onclick="document.getElementById('searchInput').value=''">Clear</button>
             </form>
             <img src="googlw.png" style="width: 120px; margin-top: 10px;">
         </div>
         
         <div class="links-section">
-            <h3>⭐ Cool Links ⭐</h3>
+            <h3>Links</h3>
             <div class="links-grid">
-                <div class="link-item">
-                    <a href="https://www.google.com">Google</a><br>
-                    <small>Search Engine</small>
-                </div>
                 <div class="link-item">
                     <a href="https://www.youtube.com">YouTube</a><br>
                     <small>Videos</small>
@@ -234,19 +229,17 @@
             </div>
         </div>
         
-        <div class="gif-divider">
-            <span style="font-size: 30px;">🔥🔥🔥🔥🔥</span>
-        </div>
+        <hr>
         
         <div class="links-section">
-            <h3>📧 Useful Tools</h3>
+            <h3>Useful Tools</h3>
             <div class="links-grid">
                 <div class="link-item">
                     <a href="https://mail.google.com">Gmail</a><br>
                     <small>Email</small>
                 </div>
                 <div class="link-item">
-                    <a href="https://mail.google.com">Proton Mail</a><br>
+                    <a href="https://mail.proton.me">Proton Mail</a><br>
                     <small>Email</small>
                 </div>
                 <div class="link-item">
@@ -283,22 +276,6 @@
                 </div>
             </div>
         </div>
-        
-        <div class="under-construction">
-            <p style="font-size: 20px; font-weight: bold;">🚧 UNDER CONSTRUCTION 🚧</p>
-            <p>This page is always being updated with new cool stuff!</p>
-        </div>
-        
-        <div class="counter">
-            <p>👁️ You are visitor number: <strong><span id="visitor">000042</span></strong></p>
-            <p style="font-size: 11px;">Page last updated: October 26, 2025</p>
-        </div>
-        
-        <div style="text-align: center; margin-top: 20px; font-size: 12px;">
-            <p>Best viewed at 800x600 resolution</p>
-            <p>Made with ❤️ and Notepad</p>
-            <p style="color: #808080;">© 2025 - All rights reserved (or something)</p>
-        </div>
     </div>
     
     <script>
@@ -310,12 +287,24 @@
             }
         });
         
-        // Contador de visitantes animado
-        let count = 42;
-        setInterval(() => {
-            count++;
-            document.getElementById('visitor').textContent = count.toString().padStart(6, '0');
-        }, 30000);
+const phrasesjson = {
+  "welcome": "hey, u made it to my messy homepage",
+  "dont_take_it_serious": "dont worry bout what i wrote here, prob forgot",
+  "funny_warning": "donot seach bad things!",
+  "random_thought": "sometimes i think the cat is judging me",
+  "weird_fact": "did u know keyboard can be used as drum, like: (SKJEHDHJAWOSJJD DJ JD EJEGSYCOQDN28DB3U36E629 F$+#72; 28 EIWN....    ), so fun!!",
+  "oops": "oops, i did it again (probably nothing bad tho)",
+  "tiny_tip": "click everything, maybe somethings fun",
+  "late_note": "im still figuring out what this page is",
+  "procrastination": "i was gonna code more but nap happened",
+  "fake_advice": "always talk to plants, they listen (instead of my boss)",
+  "conspiration": "google, micosoft, apple and other big techs spy ur system fr, switch to linux, is bery very more good"
+};
+
+const keys = Object.keys(phrasesjson);
+const randomKey = keys[Math.floor(Math.random() * keys.length)];
+const phrases = document.getElementById("phrases");
+phrases.textContent = phrasesjson[randomKey];
     </script>
 </body>
 </html>
